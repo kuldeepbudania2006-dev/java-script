@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Multiple Colors</title>
+</head>
+<body>
+
+<h2 id="myText">Click the button to change my color!</h2>
+
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+    // Array of colors to cycle through
+    const colors = ["red", "blue", "green", "purple", "orange", "brown"];
+
+    // Index to track the current color
+    let index = 0;
+
+    function changeColor() {
+        let element = document.getElementById("myText");
+
+        // Change color
+        element.style.color = colors[index];
+
+        // Move to next color
+        index++;
+
+        // Reset index if it exceeds array length
+        if (index >= colors.length) {
+            index = 0;
+        }
+    }
+</script>
+
+</body>
+</html>
